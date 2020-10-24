@@ -8,5 +8,5 @@ rm -f '/usr/local/bin/'"$2"
 ln -s "$BASEPATH"'/'"$1" '/usr/local/bin/'"$2"
 }
 
-hash doc || linkto doc doc
-hash vidoc || linkto vidoc vidoc
+hash doc &>/dev/null || linkto doc doc
+hash vidoc &>/dev/null || linkto vidoc vidoc
