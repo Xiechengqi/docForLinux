@@ -1,0 +1,2 @@
+备份: gitlab-rake gitlab:backup:create
+恢复备份，中途需要输入两次 yes (这里去掉备份名字的 _gitlab_backup.tar): gitlab-backup restore BACKUP=1600358803_2020_09_17_13.3.6

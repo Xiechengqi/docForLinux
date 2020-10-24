@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+export BASEPATH=`dirname $(readlink -f ${BASH_SOURCE[0]})`
+
+name="$1"
+[ $# -gt 1 ] && echo 'You can only take one parameter at most ...' && exit 1
+
+if [ $# != 0 ] 
+then
+hash vim && vim "$BASEPATH"'/docs/'"$1" || vi "$BASEPATH"'/docs'"$1"
+else
+hash vim && vim "$BASEPATH"'/doc' || vi "$BASEPATH"'/doc'
+fi

@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+[ $(id -u) != "0" ] && echo -e "\033[31m Error: You must be root to install doc! \033[0m" && exit 1
+export BASEPATH=`dirname $(readlink -f ${BASH_SOURCE[0]})`
+
+function linkto() {
+rm -f '/usr/local/bin/'"$2"
+ln -s "$BASEPATH"'/'"$1" '/usr/local/bin/'"$2"
+}
+
+hash doc || linkto doc doc
+hash vidoc || linkto vidoc vidoc

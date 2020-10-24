@@ -1,0 +1,4 @@
+查看输出的细节: ansible-playbook demo.yaml --verbose
+查看 yaml 脚本将影响的主机列表: ansible-playbook demo.yaml --list-hosts
+检查 yaml 脚本语法是否正确: ansible-playbook demo.yaml --syntax-check
+初始化一个 role 目录: ansible-galaxy init <role-name>

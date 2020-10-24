@@ -1,0 +1,56 @@
+#!/usr/bin/env bash
+
+
+function INFOF() {
+echo -en "\033[33m $@: \033[0m"
+# echo -en "$@: "
+}
+
+function INFO() {
+echo -e "\033[33m $@ \033[0m"
+}
+
+function CMDF() {
+echo -en "\033[32m $@ \033[0m"
+}
+
+function CMD() {
+echo -e "\033[32m $@ \033[0m"
+# echo -e "$@"
+}
+
+
+export BASEPATH=`dirname $(readlink -f ${BASH_SOURCE[0]})`
+export -f INFO INFOF CMD CMDF
+name="$1"
+
+function usage() {
+echo "DOC 查看自己常用的命令"
+echo
+echo "Usage: "
+echo "  doc [COMMAND] ..."
+echo "  doc --help"
+echo "[COMMAND]: "
+ls "$BASEPATH"'/docs' | while read line
+do
+echo "  $line"
+done
+}
+
+function print() {
+ls "$BASEPATH"'/docs' | grep "$1" &>/dev/null
+[ $? -ne 0 ] && echo -e "\033[31m $1 does not exist ... \033[0m" && return 0
+echo '>>> '"$1"
+cat "$BASEPATH"'/docs/'"$1" | while read line
+do
+INFOF $(echo $line | awk -F ':' '{print $1}')
+CMD $(echo $line | awk -F ':' '{print $2}') 
+done
+}
+
+[ $# = 0 ] && usage
+while [ $# != 0 ]
+do
+print $1 || true
+shift
+done
