@@ -7,7 +7,7 @@ name="$1"
 
 if [ $# != 0 ] 
 then
-hash vim && vim "$BASEPATH"'/docs/'"$1" || vi "$BASEPATH"'/docs'"$1"
+hash vim &>/dev/null && vim "$BASEPATH"'/docs/'"$1" || vi "$BASEPATH"'/docs'"$1"
 else
-hash vim && vim "$BASEPATH"'/doc' || vi "$BASEPATH"'/doc'
+hash vim &>/dev/null && vim "$BASEPATH"'/doc' || vi "$BASEPATH"'/doc'
 fi
