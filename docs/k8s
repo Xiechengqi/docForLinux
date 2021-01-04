@@ -1,0 +1,20 @@
+k8s cheatsheet: kubernetes.io/zh/docs/reference/kubectl/cheatsheet/
+k8s yaml: service -> deployment -> rs -> pod
+列出所有的 namespace: kubectl get ns 
+列出某个 namespace 所有 pod: kubectl get pods -n api-dev
+查看某个 pod 详情: kubectl describe pods [pod_name]
+列出所有 pod: kubectl get pods --all-namespaces -o wide
+列出一个 pod 的 YAML: kubectl get pod [pod_name] -n api-dev -o yaml
+列出某个 namespace 所有 deployment: kubectl get deployments -n api-dev / kubectl get deploy -n api-dev
+列出某个 namespace 所有 resouce: kubectl get rs -n api-dev
+列出某个 namespace 所有 repliycation: kubectl get rc -n api-dev
+列出某个 namespace 所有 service: kubectl get svc -n api-dev
+查看某个 deployment 详情: kubectl describe deploy [deploy_name] -n api-dev
+查看某个 rs 详情: kubectl describe rs [rs_name] -n api-dev
+通过 yaml 文件部署 pod: kubectl apply -f pod.yaml
+通过 yaml 文件创建 pod: kubectl apply -f pod.yaml
+通过 yaml 删除 pod: kubectl delete -f pod.yaml
+通过 yaml 文件部署 deployment: kubectl create -f deployment.yaml
+在执行其它命令时通过 -n 指定作用于某个 namespace: kubectl -n <my-ns> ... 
+在执行其它命令时指定作用于所有 namespace: kubectl --all-namespaces ... 
+在 k8s 集群安裝 kuboard: kubectl apply -f https://kuboard.cn/install-script/kuboard.yaml

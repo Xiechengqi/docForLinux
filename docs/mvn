@@ -1,1 +1,36 @@
-跳过检查 : mvn
+生命周期
+将以前编译得到的旧文件 class 字节码文件删除:mvn clean
+mvn validate
+将 java 源程序编译成 class 字节码文件:mvn compile
+自动测试，自动调用 junit 程序:mvn test
+根据 pom.xml 打包 war 或 jar:mvn package
+mvn verity
+安装到本地仓库:mvn install
+mvn site
+发布到远程仓库:mvn deploy
+
+命令格式:mvn [plugin-name]：[goal-name] [参数]
+
+常见参数
+指定参数:-D 
+在非交互（批处理）模式下运行(该模式下,当Mven需要输入时,它不会停下来接受用户的输入,而是使用合理的默认值):-mvn -B，-batch-mode 
+强制使用备用的 POM 文件:mvn -f, --file <file>
+用户配置文件的备用路径:mvn -s, --settings <arg>
+
+指定版本:mvn -DVerison
+指定制品管理平台 url:-Durl
+跳过测试(不执行测试用例，也不编译测试用例类):mvn -Dmaven.test.skip=true
+跳过测试(不执行测试用例，但编译测试用例类生成相应的class文件至target/test-classes下):mvn -DskipTests
+指定本地仓库路径:mvn -Dmaven.repo.local=/opt/other/repository
+指定使用的 settings 文件:mvn -s /opt/settings.xml
+打印依赖树:mvn dependency:tree
+打印出已解决依赖的列表:mvn dependency:resolve
+仅编译测试不运行:mvn test-compile
+检查项目所有依赖是否可用:mvn validate
+生成 mvn install 的 html 报告:mvn site
+报告测试结果:mvn report
+编译测试的内容:mvn test-compile  
+只测试而不编译，也不测试编译:mvn test -skipping compile -skipping test-compile
+
+Demo
+1:mvn deploy：deploy-file -DgroupId=com.xxxx -DartifactId=commons -Dversion=45.0.91 -Dpackaging=jar -Dfile=E:\xxxx\biospace-commons.jar -Durl=http://xxxx:8081/repository/maven-releases/ -DrepositoryId=releases

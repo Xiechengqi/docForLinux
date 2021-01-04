@@ -37,6 +37,10 @@ echo "  $line"
 done
 }
 
+function pushToGithub() {
+git clone 
+}
+
 function print() {
 ls "$BASEPATH"'/docs' | grep "$1" &>/dev/null
 [ $? -ne 0 ] && echo -e "\033[31m $1 does not exist ... \033[0m" && return 0
@@ -44,7 +48,7 @@ echo '>>> '"$1"
 cat "$BASEPATH"'/docs/'"$1" | while read line
 do
 INFOF $(echo $line | awk -F ':' '{print $1}')
-CMD $(echo $line | awk -F ':' '{print $2}') 
+CMD $(echo $line | awk -F ': ' '{$1=null;print $0}') 
 done
 }
 

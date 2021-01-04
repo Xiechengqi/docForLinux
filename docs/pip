@@ -1,0 +1,8 @@
+替换 pip 为国内源: pip config set global.index-url https://mirrors.aliyun.com/pypi/simple
+pip 安装指定软件源: pip install markdown -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip 安装指定版本: pip install httprunner==2.1.4
+查看 pip 安装列表: pip list
+查找: pip search selenium
+显示已安装的依赖: pip show selenium
+升级: pip install -U httprunner
+安装 github 仓库最新: pip install git+https://github.com/HttpRunner/HttpRunner.git@master

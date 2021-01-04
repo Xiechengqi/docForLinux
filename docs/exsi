@@ -1,0 +1,12 @@
+查看 exsi 版本: vmware -v
+修改 exsi 密码: passwd root
+查看 vim-cmd vmsvc 命令: vim-cmd vmsvc help
+列出所有虚拟机: vim-cmd vmsvc/getallvms
+开启虚拟机: vim-cmd vmsvc/power.on 1
+关闭虚拟机: vim-cmd vmsvc/power.off 1
+获取虚拟机状态: vim-cmd vmsvc/power.getstate 1
+判断虚拟机是否在运行: ps | grep -i [虚拟机名字]
+列出正在运行的虚拟机: esxcli vm process list
+查看 vmid 虚拟机摘要信息: vim-cmd vmsvc/get.summary <vmid>
+查看 vmid 虚拟机设备信息: vim-cmd vmsvc/device.getdevices <vmid>
+查看 vmid 虚拟机基本配置: vim-cmd vmsvc/get.config <vmid>

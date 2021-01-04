@@ -2,3 +2,5 @@
 查看 yaml 脚本将影响的主机列表: ansible-playbook demo.yaml --list-hosts
 检查 yaml 脚本语法是否正确: ansible-playbook demo.yaml --syntax-check
 初始化一个 role 目录: ansible-galaxy init <role-name>
+查看所有 facts 信息: ansible hosts -m setup
+筛选查看 facts 信息: ansible hosts -m setup -a 'filter=ansible_all_ipv4_addresses'
