@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+trap "_clean" EXIT
+
+_clean() {
+rm -rf /tmp/$$_*
+}
 
 function INFOF() {
 echo -en "\033[33m $@: \033[0m"
@@ -38,10 +43,15 @@ done
 }
 
 function pushToGithub() {
-git clone 
+git clone git@github.com:Xiechengqi/docForLinux.git /tmp/$$_repo
+cd /tmp/$$_repo
+cp -f /opt/doc/docs/* docs/
+git add -A && git commit -m 'add docs' && git push origin main
+cd -
 }
 
 function print() {
+[ "$1" == "push" ] && pushToGithub && return 0
 ls "$BASEPATH"'/docs' | grep "$1" &>/dev/null
 [ $? -ne 0 ] && echo -e "\033[31m $1 does not exist ... \033[0m" && return 0
 echo '>>> '"$1"
