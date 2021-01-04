@@ -1,0 +1,2 @@
+编译: go build hello.go
+运行: go run hello.go
