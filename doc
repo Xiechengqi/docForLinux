@@ -34,6 +34,8 @@ echo "DOC 查看自己常用的命令"
 echo
 echo "Usage: "
 echo "  doc [COMMAND] ..."
+echo "  doc pull: 从 gihub 仓库拉最新文档"
+echo "  doc push: 推送最新文档到 gihub 仓库"
 echo "  doc --help"
 echo "[COMMAND]: "
 ls "$BASEPATH"'/docs' | while read line
