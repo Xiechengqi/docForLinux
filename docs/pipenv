@@ -1,0 +1,8 @@
+安装 pipenv: pip install pipenv
+初始化一个 python3 版本的虚拟环境: pipenv --three
+初始化一个 python2 版本的虚拟环境: pipenv --two
+激活当前项目的虚拟环境: pipenv shell
+图形显示包依赖关系: pipenv graph
+生成 lockfile: pipenv lock
+删除所有的安装包: pipenv uninstall --all
+

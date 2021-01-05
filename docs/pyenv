@@ -1,0 +1,17 @@
+查看 pyenv 版本: pyenv versions
+查看可安装列表: pyenv install -l
+安装指定版本 python: pyenv install 3.6.8
+卸载指定版本 python: pyenv uninstall 3.6.8
+查看 python 安装目录: ls ~/.pyenv/versions/
+直接删除目录卸载 python: rm -rf ~/.pyenv/versions/3.6.8
+切换 python 版本: pyenv global 3.6.8
+创建 env1 环境: pyenv virtualenv env1
+列出所有虚拟环境: pyenv virtualenvs
+激活指定虚拟环境: pyenv activate env1
+退出虚拟环境: pyenv deactivate
+删除指定虚拟环境: pyenv uninstall env1 或 rm -rf ~/.pyenv/versions/env1
+更新 Pipfile.lock 文件锁定当前环境的依赖版本: pyenv lock
+更新项目所有包: pyenv update
+查看现在已经过期的包: pyenv update --outdated
+更新指定包: pyenv update <package-name>
+卸载指定包: pyenv uninstall <package-name>
