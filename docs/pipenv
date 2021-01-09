@@ -4,5 +4,5 @@
 激活当前项目的虚拟环境: pipenv shell
 图形显示包依赖关系: pipenv graph
 生成 lockfile: pipenv lock
+生成 requirements.txt: pipenv lock -r > requirements.txt
 删除所有的安装包: pipenv uninstall --all
-

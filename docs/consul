@@ -1,0 +1,3 @@
+新增 node_exporter: curl http://192.168.9.1/pipeline/install/node_exporter/node_exporter.sh -o /tmp/node_exporter.sh && bash /tmp/node_exporter.sh
+新增: curl -X PUT -d @/tmp/$$.json http://consul.paraview.cn/v1/agent/service/register
+删除: curl -X PUT http://consul.paraview.cn/v1/agent/service/deregister/node-exporter-192.168.3.1
