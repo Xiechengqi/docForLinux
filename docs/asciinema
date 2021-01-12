@@ -1,0 +1,4 @@
+安装: pip3 install asciinema
+开始录制: asciinema rec
+播放在线视频: asciinema play https://asciinema.org/a/132560
+播放本地文件: asciinema play /path/132560.json
