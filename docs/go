@@ -1,2 +1,8 @@
+版本: go version
+环境变量: go env
+格式化: go fmt
+设置goproxy代理(>=1.13): go env -w GO111MODULE=on; go env -w GOPROXY=https://goproxy.cn,direct
+设置goproxy代理(<1.13): echo -e "export GO111MODULE=on/nexport GOPROXY=https://goproxy.io" >> /etc/profile
+安装依赖: go get github.com/beego/beego/v2@v2.0.0
 编译: go build hello.go
 运行: go run hello.go

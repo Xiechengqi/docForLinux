@@ -1,0 +1,2 @@
+启动服务: redis-server [--port 端口] [../redis.conf]
+客户端连接: redis-cli -h 192.168.3.17 -p 10001 -a password
