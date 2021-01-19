@@ -1,0 +1,12 @@
+查看一个容器里面的进程信息: docker top commidID
+把一个镜像保存到 tar 文件: docker save registry:2.7.1 >registry-2.7.1.tar
+把镜像从 tar 文件导入到 docker : docker load < registry-2.7.1.tar
+在命令行中搜索 DockerHub 中的镜像: docker search nginx
+实时获取 docker 的各种事件信息: docker events
+修改容器参数: docker update nginx --cpus 2
+查看一个镜像是怎么构建: docker history traefik:v2.1.6
+查看容器的退出状态: docker wait commitID
+暂停容器: docker pause commitID
+查看容器里修改了哪一些文件: docker diff commitID
+查看当前主机下所有容器占用内存和 cpu 的情况: docker stats
+

@@ -1,0 +1,2 @@
+安装 tmate: sudo apt install -y tmate; sudo yum install -y tmate
+终端共享: tmate
