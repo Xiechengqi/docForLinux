@@ -1,2 +1,3 @@
 设置提交代码时的用户名: git config [--global] user.name "[name]"
 设置提交代码时的用户邮箱: git config [--global] user.email "[email]"
+查看项目早期代码提交: git log --before={2008-03-03} --reverse

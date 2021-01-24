@@ -1,4 +1,5 @@
 版本: go version
+初始化项目: go mod init 项目名
 编译自身包和依赖包: go build hello.go
 运行: go run hello.go
 环境: go env 
@@ -8,3 +9,4 @@
 格式化并重写目录 xxx 下所有 go 文件: gofmt xxx
 格式化并比较: gofmt -d xxx.go
 打印: print、println：print("ABC")、println("ABC")、println(i)、fmt.printf("a")、fmt.print("a")、fmt.println("a")
+设置 goproxy: go env -w GO111MODULE=on && go env -w GOPROXY=https://goproxy.cn,direct

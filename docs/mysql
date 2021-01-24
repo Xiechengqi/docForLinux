@@ -1,0 +1,9 @@
+mysql 数据库基本对象: 表(包含表结构，约束（主键，唯一键，外键等）)、视图、存储过程、存储函数、触发器、事件，备份时一个不能少
+导出结构，无数据: mysqldump --opt --no-data db1 -u root -p > xxx-DDL.sql
+导出数据，无结构: mysqldump --opt --no-create-info db1 -u root -p > xxx-DML.sql
+导出数据和结构: mysqldump -u root -p --opt db1 > xxx.sql
+导出数据、结构、函数和存储: mysqldump -u root -p --opt -R db1 > xxx.sql
+导出多个数据库: mysqldump -u root -p --opt --databases db1 db2 > xxx.sql
+导出特定表的结构: mysqldump -u root -p -B db1 --table table1 > xxx.sql
+导出数据库最佳实践: mysqldump -h localhost -uusername -ppwssword -P端口号 --master-data=2 --single-transaction --opt --routines --events --triggers database_name
+查看数据库大小: USE information_schema; SELECT TABLE_SCHEMA, SUM(DATA_LENGTH)/1024 FROM TABLES GROUP BY TABLE_SCHEMA;

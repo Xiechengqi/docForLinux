@@ -1,0 +1,1 @@
+端口映射: ssh -p 2222 -L 8000:localhost:8000 root@aliyun
