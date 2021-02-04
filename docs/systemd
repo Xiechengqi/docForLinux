@@ -1,1 +1,4 @@
 查看开机启动项: systemctl list-unit-files --type=service | grep enabled
+查看某个服务日志: journalctl -u service-name.service
+查看某个服务完整日志: journalctl -u service-name.service --no-pager
+

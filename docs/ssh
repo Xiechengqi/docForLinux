@@ -1,1 +1,1 @@
-端口映射: ssh -p 2222 -L 8000:localhost:8000 root@aliyun
+端口映射: ssh -p 2222 -L 8000:localhost:8000 root@aliyun / ssh -L 8443:localhost:443 -J root@aliyun:22222 root@192.168.1.11

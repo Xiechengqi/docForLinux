@@ -1,3 +1,12 @@
+SHORTCUTS
+vim
 u: 撤销，向后
 CTRL r: 撤销，向前
 CTRL v: 多行 visual
+&: 用 # 注释单行
+
+
+
+CTRL k: 删除光标后
+CTRL h: backspace
+CTRL a: 跳到行首
