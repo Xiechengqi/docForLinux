@@ -26,7 +26,6 @@ ctrl+y: 粘贴或者恢复上次的删除
 ctrl+d: 删除光标所在字母;注意和backspace以及ctrl+h的区别，这2个是删除光标前的字符
 ctrl+f: 光标右移
 ctrl+z: 把当前进程转到后台运行，使用’ fg ‘命令恢复比如top -d1 然后ctrl+z ，到后台，然后fg,重新恢复
-esc组合
 esc+d: 删除光标后的一个词
 esc+f: 往右跳一个词
 esc+b: 往左跳一个词
