@@ -9,4 +9,11 @@
 暂停容器: docker pause commitID
 查看容器里修改了哪一些文件: docker diff commitID
 查看当前主机下所有容器占用内存和 cpu 的情况: docker stats
-
+创建一个交互式容器: docker -it
+创建一个后台运行容器: docker -d
+查看容器的改动: docker diff [container]
+将当前容器保存成一个镜像(给容器打快照，保存"案发"现场): docker commit --author "xiecq" --message "代码" vscode vscode:jenkins
+查看镜像内的历史记录: docker history [image]
+保存镜像: docker save alpine | gzip > alpine-latest.tar.gz
+加载镜像: docker load -i alpine-latest.tar.gz
+单行实现保存传输和加载镜像: docker save <镜像名> | bzip2 | pv | ssh <用户名>@<主机名> 'cat | docker load'

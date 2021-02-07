@@ -1,0 +1,4 @@
+更换centos7镜像源: curl -o /etc/yum.repos.d/CentOS-Base.repo https://mirrors.aliyun.com/repo/Centos-7.repo && yum makecache
+安装常用软件: yum install -y net-tools epel-release wget vim
+更换docker镜像源: echo '"registry-mirrors": ["https://ykawlvjt.mirror.aliyuncs.com"]' >> /etc/docker/daemon.json && systemctl daemon-reload && systemctl restart docker
+将 SELinux 设置为 permissive 模式（相当于将其禁用）: setenforce 0 && sed -i 's/^SELINUX=enforcing$/SELINUX=permissive/' /etc/selinux/config
