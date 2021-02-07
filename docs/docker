@@ -1,3 +1,4 @@
+查看docker基本信息(镜像源): docker info
 查看一个容器里面的进程信息: docker top commidID
 把一个镜像保存到 tar 文件: docker save registry:2.7.1 >registry-2.7.1.tar
 把镜像从 tar 文件导入到 docker : docker load < registry-2.7.1.tar

@@ -31,4 +31,4 @@ mvn site
 Demo
 1: mvn deploy:deploy-file -DgroupId=com.xxxx -DartifactId=commons -Dversion=45.0.91 -Dpackaging=jar -Dfile=/opt/biospace-commons.jar -Durl=http://xxxx:8081/repository/maven-releases/ -DrepositoryId=releases
 sonar扫描: mvn sonar:sonar -Dsonar.projectKey={project-name} -Dsonar.host.url=http://192.168.30.217:9000 -Dsonar.login=10ac31fd0b091a4e9ee93e7351bc40f90f91acb3
-
+sonar: mvn clean verify sonar:sonar
