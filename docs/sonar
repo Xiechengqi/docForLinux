@@ -1,0 +1,1 @@
+前端 sonar 扫描: sonar-scanner -Dsonar.sources=./src/ -Dsonar.host.url=http://192.168.2.35:8080/ -Dsonar.login=admin -Dsonar.password=admin -Dsonar.branch.name="master" -Dsonar.projectKey="infini-portal" -Dsonar.projectName="API-infini-portal"

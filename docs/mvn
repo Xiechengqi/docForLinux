@@ -28,7 +28,7 @@ mvn site
 报告测试结果: mvn report
 编译测试的内容: mvn test-compile  
 只测试而不编译，也不测试编译: mvn test -skipping compile -skipping test-compile
-Demo
-1: mvn deploy:deploy-file -DgroupId=com.xxxx -DartifactId=commons -Dversion=45.0.91 -Dpackaging=jar -Dfile=/opt/biospace-commons.jar -Durl=http://xxxx:8081/repository/maven-releases/ -DrepositoryId=releases
+推送制品: mvn deploy:deploy-file -DgroupId=com.xxxx -DartifactId=commons -Dversion=45.0.91 -Dpackaging=jar -Dfile=/opt/biospace-commons.jar -Durl=http://xxxx:8081/repository/maven-releases/ -DrepositoryId=releases
 sonar扫描: mvn sonar:sonar -Dsonar.projectKey={project-name} -Dsonar.host.url=http://192.168.30.217:9000 -Dsonar.login=10ac31fd0b091a4e9ee93e7351bc40f90f91acb3
-
+sonar: mvn clean verify -Dpmd.skip=true -Dcheckstyle.skip=true -Dmaven.test.skip=true sonar:sonar -Dsonar.login=admin -Dsonar.password=admin -Dsonar.host.url=http://192.168.2.35:8080/ -Dsonar.branch.name="master" -Dsonar.projectKey="apim" -Dsonar.projectName="API-apim" -s /opt/settings/API.xml -X
+OSCSerivce: curl -SsL http://192.168.9.1/pipeline/scripts/sonar/sonarCheck.sh -o /tmp/sonarCheck.sh && bash /tmp/sonarCheck.sh -u ssh://git@gitlab.paraview.cn:2222/OSC6/OSCService/OSCService.git -b dev -p OSC -s osc-aom/osc-aom-core -s osc-aom/osc-aom-server -s osc-api -s osc-audit/audit-core -s osc-audit/audit-server -s osc-auth -s osc-commons-log -s osc-commons -s osc-core -s osc-device/device-server -s osc-device/device-core -s osc-gateway -s osc-job -s osc-msg/msg-server -s osc-msg/msg-core -s osc-password/password-server -s osc-password/password-core -s osc-policy/policy-server -s osc-policy/policy-core -s osc-server -s osc-third/third-server -s osc-third/third-core -t mvn -m true

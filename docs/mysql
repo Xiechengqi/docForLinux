@@ -7,3 +7,4 @@ mysql 数据库基本对象: 表(包含表结构，约束（主键，唯一键�
 导出特定表的结构: mysqldump -u root -p -B db1 --table table1 > xxx.sql
 导出数据库最佳实践: mysqldump -h localhost -uusername -ppwssword -P端口号 --master-data=2 --single-transaction --opt --routines --events --triggers database_name
 查看数据库大小: USE information_schema; SELECT TABLE_SCHEMA, SUM(DATA_LENGTH)/1024 FROM TABLES GROUP BY TABLE_SCHEMA;
+导出某个数据库某张表: mysqldump -uroot db1 tableName -p > table.sql;
