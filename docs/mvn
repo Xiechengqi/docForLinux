@@ -27,6 +27,7 @@ mvn site
 生成 mvn install 的 html 报告: mvn site
 报告测试结果: mvn report
 编译测试的内容: mvn test-compile  
+忽略执行测试用例失败: mvn test -Dmaven.test.failure.ignore=true
 只测试而不编译，也不测试编译: mvn test -skipping compile -skipping test-compile
 推送制品: mvn deploy:deploy-file -DgroupId=com.xxxx -DartifactId=commons -Dversion=45.0.91 -Dpackaging=jar -Dfile=/opt/biospace-commons.jar -Durl=http://xxxx:8081/repository/maven-releases/ -DrepositoryId=releases
 sonar扫描: mvn sonar:sonar -Dsonar.projectKey={project-name} -Dsonar.host.url=http://192.168.30.217:9000 -Dsonar.login=10ac31fd0b091a4e9ee93e7351bc40f90f91acb3

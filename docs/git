@@ -1,3 +1,7 @@
 设置提交代码时的用户名: git config [--global] user.name "[name]"
 设置提交代码时的用户邮箱: git config [--global] user.email "[email]"
 查看项目早期代码提交: git log --before={2008-03-03} --reverse
+拿工作区和暂存区比较差异: git diff
+获取远程仓库分支最新提交 CommitId: git ls-remote git://github.com/jszakmeister/trac-backlog.git refs/heads/master | cut -f 1
+获取本地仓库分支最新提交 CommitId: git rev-parse HEAD / git rev-parse [分支名]
+查看本地分支落后于远程分支的提交列表: git fetch origin && git cherry localbranch remotebranch
