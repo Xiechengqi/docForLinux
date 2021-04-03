@@ -1,0 +1,1 @@
+显示不换行: journalctl -u [服务名] --no-pager

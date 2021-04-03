@@ -2,18 +2,30 @@ test-5.4: ssh -p 22102 222.73.173.45 root/Parav1ew@2020
 test-5.4 访问地址: http://eictest54.sso360.cn:10054
 test-5.4 网关地址: http://222.73.173.45:11154
 test-5.3: ssh -p 22101 root@222.73.173.45 root/Parav1ew@2020
-test-5.3 访问地址: https://eictest53.sso360.cn:10153
+test-5.3 访问地址: https://eictest53.sso360.cn:10153 sysadmin / T1v0li123!
 test-5.3 网关地址: http://222.73.173.45:11153
+test55ngx: 192.168.10.51 root / Parav1ew
+test55ngx 访问地址: http://test55ngx.sso360.cn:3055
+
 
 
 pipeline dev 环境: 192.168.5.10 - root / Parav1ew
 pipeline dev 访问: http://eicdev55.sso360.cn:1055 - sysadmin / T1v0li123!
 pipeline dev 网关: http://192.168.5.10:10000 - sysadmin / T1v0li123!
+
+pipeline dev nginx 环境: 192.168.5.15 - root / Parav1ew
+pipeline dev nginx 数据库: 192.168.5.15 - root / Parav1ew!
+pipeline dev nginx 访问: http://eictest55ngx.sso360.cn:2055/ - sysadmin / Parav1ew!
+
 pipeline test 环境: 192.168.5.11 - root / Parav1ew
-pipeline test 网关: http://192.168.5.11:11000 - sysadmin / T1v0li123!
+pipeline test 网关: http://192.168.5.11:10000 - sysadmin / T1v0li123!
 pipeline test 访问: http://eictest55.sso360.cn:1155 - sysadmin / T1v0li123!
-test 环境（旧）: https://test55.sso360.cn:10155/login/ - sysadmin / T1v0li123!
-https://test55.sso360.cn:10155/
+
+test55 环境: 10.10.1.109 222.73.173.45:22109 root/Parav1ew
+test55 数据库: 10.10.1.109 222.73.173.45:22109 esc/T1v0li123!
+test55 网关: http://222.73.173.45:11155/
+test55 访问: https://test55.sso360.cn:10155/login/ - sysadmin / T1v0li123!
+dev53 环境: 192.168.2.83 root / rootroot
 
 grafana-server: 13000 
 node_exporter: 9100

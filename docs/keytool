@@ -1,0 +1,3 @@
+导入证书: keytool -import -trustcacerts -alias 192.168.2.41 -file $JAVA_HOME/jre/lib/security/192.168.2.41-Base64.cer -storepass changeit -keypass changeit -keystore $JAVA_HOME/jre/lib/security/cacerts
+查看证书: keytool -list -keystore cacerts -alias 192.168.2.41 -storepass changeit
+删除证书: keytool -delete -alias 192.168.2.41 -keystore $JAVA_HOME/jre/lib/security/cacerts -storepass changeit

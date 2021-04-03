@@ -4,7 +4,11 @@ mysql 数据库基本对象: 表(包含表结构，约束（主键，唯一键�
 导出数据和结构: mysqldump -u root -p --opt db1 > xxx.sql
 导出数据、结构、函数和存储: mysqldump -u root -p --opt -R db1 > xxx.sql
 导出多个数据库: mysqldump -u root -p --opt --databases db1 db2 > xxx.sql
-导出特定表的结构: mysqldump -u root -p -B db1 --table table1 > xxx.sql
+导出特定表的结构: mysqldump -u root -p -d db1 table1 > xxx.sql
 导出数据库最佳实践: mysqldump -h localhost -uusername -ppwssword -P端口号 --master-data=2 --single-transaction --opt --routines --events --triggers database_name
 查看数据库大小: USE information_schema; SELECT TABLE_SCHEMA, SUM(DATA_LENGTH)/1024 FROM TABLES GROUP BY TABLE_SCHEMA;
 导出某个数据库某张表: mysqldump -uroot db1 tableName -p > table.sql;
+查看数据表大小: select concat(round(sum(data_length/1024/1024),2),'MB') as data from tables where table_schema='escdb' and table_name='check_user';
+开启远程连接:  USE mysql; GRANT ALL PRIVILEGES ON *.* TO '用户名'@'%'IDENTIFIED BY '用户密码' WITH GRANT OPTION; FLUSH PRIVILEGES;
+查看现有用户,密码及允许连接的主机: USE mysql; SELECT User, authentication_string, Host FROM user; desc user;
+创建数据库指定 UTF-8 编码: CREATE DATABASE `mydb` CHARACTER SET utf8 COLLATE utf8_general_ci;
