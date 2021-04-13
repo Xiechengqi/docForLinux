@@ -1,1 +1,4 @@
 找出最大的10个文件: find / -type f -print0 | xargs -0 du -h | sort -rh | head -n 10
+查看当前最大文件打开数: ulimit -Hn
+查看系统文件打开数上线: sysctl -n -e fs.file-max
+在 /etc/security/limits.conf 添加: 星号 soft nofile 300000 换行 星号 hard nofile 300000

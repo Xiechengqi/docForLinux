@@ -1,0 +1,7 @@
+查看 yarn 版本: yarn --version
+NPM安装yarn: npm install -g yarn
+查看当前yarn源: yarn config get registry
+临时替换软件源: yarn save 软件名 --registry https://registry.npm.taobao.org/
+永久修改软件源: yarn config set registry https://registry.npm.taobao.org
+获取缓存目录: yarn cache dir
+修改缓存目录: yarn config set cache-folder 目录

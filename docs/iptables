@@ -1,0 +1,2 @@
+查看当前系统iptables规则: iptables -nL
+查看主机的 NAT 规则: iptables -t nat -nL

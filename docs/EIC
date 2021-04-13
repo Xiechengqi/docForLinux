@@ -26,6 +26,7 @@ test55 数据库: 10.10.1.109 222.73.173.45:22109 esc/T1v0li123!
 test55 网关: http://222.73.173.45:11155/
 test55 访问: https://test55.sso360.cn:10155/login/ - sysadmin / T1v0li123!
 dev53 环境: 192.168.2.83 root / rootroot
+dev53 访问: http://eicdev53.sso360.cn:10053/
 
 grafana-server: 13000 
 node_exporter: 9100
