@@ -1,0 +1,8 @@
+安装beego: go get github.com/beego/beego/v2
+安装bee: go get github.com/beego/bee/v2
+升级 go get -u github.com/beego/bee/v2
+版本: bee version
+新建web项目: bee new webProject
+新建api项目: bee api apiPorject
+运行: bee run
+打包: bee pack 

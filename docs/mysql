@@ -1,4 +1,5 @@
 mysql 数据库基本对象: 表(包含表结构，约束（主键，唯一键，外键等）)、视图、存储过程、存储函数、触发器、事件，备份时一个不能少
+备份数据库: mysqldump -u user_name -p123456 database_name > outfile_name.sql
 导出结构，无数据: mysqldump --opt --no-data db1 -u root -p > xxx-DDL.sql
 导出数据，无结构: mysqldump --opt --no-create-info db1 -u root -p > xxx-DML.sql
 导出数据和结构: mysqldump -u root -p --opt db1 > xxx.sql
@@ -12,3 +13,13 @@ mysql 数据库基本对象: 表(包含表结构，约束（主键，唯一键�
 开启远程连接:  USE mysql; GRANT ALL PRIVILEGES ON *.* TO '用户名'@'%'IDENTIFIED BY '用户密码' WITH GRANT OPTION; FLUSH PRIVILEGES;
 查看现有用户,密码及允许连接的主机: USE mysql; SELECT User, authentication_string, Host FROM user; desc user;
 创建数据库指定 UTF-8 编码: CREATE DATABASE `mydb` CHARACTER SET utf8 COLLATE utf8_general_ci;
+开启root远程连接: GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'password' WITH GRANT OPTION; FLUSH PRIVILEGES; 
+查看表所有列: DESC user; 或 DESCRIBE user; 或 SHOW COLUMNS FROM user;
+查看已存在数据库或数据表的创建命令: SHOW CREATE DATABASE [数据库名] 或 SHOW CREATE TABLE [数据表名]
+只查看前2行: select Host,User from user limit 2;
+查看从第2行开始的2行: select Host,User from user limit 2,2;
+删除时间点之前binlog: PURGE MASTER LOGS BEFORE '2019-03-11 00:00:00';
+查看现有定时清理时间: show variables like 'expire_logs_days'; 
+设置定时清理 1 天前 binlog: set global expire_logs_days = 1;
+创建用户: create user '用户名'@'IP地址' identified by '密码';
+删除用户: drop user '用户名'@'IP地址'; 或 delete from user where user='用户名' and host='localhost';

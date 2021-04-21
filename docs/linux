@@ -2,3 +2,6 @@
 查看当前最大文件打开数: ulimit -Hn
 查看系统文件打开数上线: sysctl -n -e fs.file-max
 在 /etc/security/limits.conf 添加: 星号 soft nofile 300000 换行 星号 hard nofile 300000
+监控: top -c -bw 500 -p `/opt/paraview/esc/app/java/bin/jps | egrep 'sso|audit|mfa|mobile|idm' | awk '{print $1}' | tr "\n" "," | sed 's/,$//'`
+监控: curl -SsL install.paraview.cn/monitor.sh | bash -s nginx java idm -server
+配置主机名: hostnamectl set-hostname xxxx

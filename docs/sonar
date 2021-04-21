@@ -1,1 +1,10 @@
 前端 sonar 扫描: sonar-scanner -Dsonar.sources=./src/ -Dsonar.host.url=http://192.168.2.35:8080/ -Dsonar.login=admin -Dsonar.password=admin -Dsonar.branch.name="master" -Dsonar.projectKey="infini-portal" -Dsonar.projectName="API-infini-portal"
+# Set jacoco Configuration
+    #sonar.jacoco.reportPaths=[yourPath/]jacoco.exec
+    # 以下属性可选择性加，当然也可以不加
+    sonar.dynamicAnalysis=reuseReports
+    sonar.jacoco.reportMissing.force.zero=false
+
+指定代码覆盖率工具: -Dsonar.core.codeCoveragePlugin=jacoco
+指定 xml 报告生成目录，默认 target/site/jacoco/jacoco.xml: -Dsonar.coverage.jacoco.xmlReportPaths=
+指定exec二进制文件存放路径，默认 target/coverage-reports: sonar.jacoco.reportPaths=target/coverage-reports/jacoco-unit.exec

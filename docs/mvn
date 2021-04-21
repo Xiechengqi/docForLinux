@@ -28,6 +28,8 @@ mvn site
 生成 mvn install 的 html 报告: mvn site
 报告测试结果: mvn report
 编译测试的内容: mvn test-compile  
+没有测试用例是否失败终止: -DfailIfNoTests
+跳过依赖检查: -Ddependency-check.skip=true (不生效参数,未知原因: -Dowasp.skip=true)
 忽略执行测试用例失败: mvn test -Dmaven.test.failure.ignore=true
 该命令所经历阶段顺序：清理、设置jacoco代理、打包、执行测试用例、生成jacoco报告、推送报告到sonarqube: mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package org.jacoco:jacoco-maven-plugin:report sonar:sonar
 只测试而不编译，也不测试编译: mvn test -skipping compile -skipping test-compile

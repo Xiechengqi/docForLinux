@@ -1,0 +1,8 @@
+查看wireguard模块: lsmod | grep wireguard 或 modprobe wireguard
+获取当前内核版本: uname -a
+获取wireguard版本: rpm -qi wireguard-dkms | grep Version
+安装需要的 source code 和 headers: yum install kernel-headers-3.10.0-1062.4.1.el7.x86_64 kernel-devel-3.10.0-1062.4.1.el7.x86_64
+重新为新 kernel 编译 wireguard 模块: dkms build -m wireguard -v 0.0.20190913 -k 3.10.0-1062.4.1.el7.x86_64
+启动原来配置好的 wg_ofc 设备: wg-quick up wg_ofc
+wiregurad配置文件: /etc/wireguard/wg_ofc.conf
+CentOS7安装wireguard(6 8 只需将 7 改了): curl -Lo /etc/yum.repos.d/wireguard.repo https://copr.fedorainfracloud.org/coprs/jdoss/wireguard/repo/epel-7/jdoss-wireguard-epel-7.repo; yum install wireguard-dkms wireguard-tools;
