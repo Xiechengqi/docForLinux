@@ -1,0 +1,2 @@
+修改网络: /etc/netplan/
+netplan重新加载: netplan apply

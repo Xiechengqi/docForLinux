@@ -1,0 +1,1 @@
+开启远程: -Xmx1024m -Xms512m -Xss256k -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5006

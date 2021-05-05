@@ -9,4 +9,13 @@
 格式化并重写目录 xxx 下所有 go 文件: gofmt xxx
 格式化并比较: gofmt -d xxx.go
 打印: print、println：print("ABC")、println("ABC")、println(i)、fmt.printf("a")、fmt.print("a")、fmt.println("a")
-设置 goproxy: go env -w GO111MODULE=on && go env -w GOPROXY=https://goproxy.cn,direct
+临时设置 goproxy: go env -w GO111MODULE=on && go env -w GOPROXY=https://goproxy.cn,direct
+永久设置 goproxy: echo "export GOPROXY=https://goproxy.io,direct" >> ~/.profile && source ~/.profile
+安装: rm -rf /usr/local/go && tar -C /usr/local -xzf go1.16.3.linux-amd64.tar.gz && export PATH=$PATH:/usr/local/go/bin
+启用 Go Modules 功能: export GO111MODULE=on
+go 语言安装主根目录: export GOROOT=/usr/local/go
+GOPATH 是自己的go项目路径: export GOPATH=/Users/ding/go_workspace
+GOBIN 当我们使用 go install 命令编译后并且安装的二进制程序目录: export GOBIN=$GOPATH/bin
+配置 GOPROXY 环境变量: export GOPROXY=https://goproxy.cn,direct
+配置 GO 项目 bin PATH 目录: export PATH=$PATH:$GOROOT/bin:$GOBIN
+

@@ -1,0 +1,4 @@
+预先设置: jfrog rt config --user=用户名 --password=密码 --url=https://xxx.xx.xx/artifactory --interactive=false
+下载目录: jfrog rt dl artifactory路径 --url="https://xxx.xxx.xx/artifactory" --threads=1 --split-count=0
+上传目录(上传后，在服务器上的路径将是 <服务器路径>+<本地路径>: jfrog rt u <本地路径> <服务器路径> --flat=false
+删除目录(路径末尾有/ 则删除目录下所有文件及子文件夹，但是文件夹本身不删除;路径末尾没有/ 则删除文件夹本身，也包括文件夹下的子文件夹和文件): jfrog rt del <服务器路径，不包含https://xxx.xx.xx/artifactory > --quiet=true 

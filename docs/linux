@@ -4,4 +4,6 @@
 在 /etc/security/limits.conf 添加: 星号 soft nofile 300000 换行 星号 hard nofile 300000
 监控: top -c -bw 500 -p `/opt/paraview/esc/app/java/bin/jps | egrep 'sso|audit|mfa|mobile|idm' | awk '{print $1}' | tr "\n" "," | sed 's/,$//'`
 监控: curl -SsL install.paraview.cn/monitor.sh | bash -s nginx java idm -server
-配置主机名: hostnamectl set-hostname xxxx
+配置并生效主机名: hostnamectl set-hostname [主机名] && hostnamectl --pretty && hostnamectl --static && hostnamectl --transient
+查看软件包: yum list | grep 软件名
+关闭selinux: setenforce 0

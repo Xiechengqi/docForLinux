@@ -1,0 +1,3 @@
+mysql: curl -SsL http://install.xiechengqi.top/mysql/install.sh | bash
+redis: curl -SsL http://install.xiechengqi.top/redis/install.sh | bash
+docker: curl -SsL http://install.xiechengqi.top/docker/install.sh | bash

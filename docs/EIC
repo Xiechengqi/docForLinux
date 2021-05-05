@@ -28,8 +28,18 @@ test55 访问: https://test55.sso360.cn:10155/login/ - sysadmin / T1v0li123!
 dev53 环境: 192.168.2.83 root / rootroot
 dev53 访问: http://eicdev53.sso360.cn:10053/
 
+dev 环境: 192.168.10.74 root / Parav1ew
+
+POC环境: 10.10.1.157 https://eic551.sso360.cn:10551/
+
 grafana-server: 13000 
 node_exporter: 9100
 
 数据库中修改访问域名: https://confluence.sso360.cn/pages/viewpage.action?pageId=21300840
 数据库修改用户密码: idt_user 表 pwd 字段
+
+
+http://eic551.sso360.cn:10551/
+预发布环境demo环境poc：
+	  【 http://eic551.sso360.cn:10551/   sysadmin /Parav1ew!
+	 数据库信息：10.10.1.157    idm/Parav1ew! 】

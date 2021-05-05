@@ -23,3 +23,8 @@ mysql 数据库基本对象: 表(包含表结构，约束（主键，唯一键�
 设置定时清理 1 天前 binlog: set global expire_logs_days = 1;
 创建用户: create user '用户名'@'IP地址' identified by '密码';
 删除用户: drop user '用户名'@'IP地址'; 或 delete from user where user='用户名' and host='localhost';
+查看默认密码: grep 'temporary password' /var/log/mysqld.log
+修改密码: mysqladmin -u用户名 -p旧密码 password 新密码
+删除表: TRUNCATE TABLE [表名];
+
+

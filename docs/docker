@@ -1,6 +1,7 @@
 替换 docker 镜像源: curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://f1361db2.m.daocloud.io
 Docker 官方镜像市场: https://hub.docker.com/
 DaoCloud 镜像市场: https://hub.daocloud.io/
+查看当前主机下所有容器占用内存和 cpu 的情况: docker stats
 拉取镜像: docker pull [选项] [Docker Registry 地址[:端口号]/]仓库名[:标签]
 查看镜像、容器、数据卷所占用的空间: docker system df
 查看docker基本信息(镜像源): docker info
@@ -14,7 +15,6 @@ DaoCloud 镜像市场: https://hub.daocloud.io/
 查看容器的退出状态: docker wait commitID
 暂停容器: docker pause commitID
 查看容器里修改了哪一些文件: docker diff commitID
-查看当前主机下所有容器占用内存和 cpu 的情况: docker stats
 创建一个交互式容器: docker -it
 创建一个后台运行容器: docker -d
 查看容器的改动: docker diff [container]

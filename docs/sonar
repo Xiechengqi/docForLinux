@@ -6,5 +6,8 @@
     sonar.jacoco.reportMissing.force.zero=false
 
 指定代码覆盖率工具: -Dsonar.core.codeCoveragePlugin=jacoco
-指定 xml 报告生成目录，默认 target/site/jacoco/jacoco.xml: -Dsonar.coverage.jacoco.xmlReportPaths=
+指定 xml 报告生成目录，默认 target/site/jacoco/jacoco.xml: -Dsonar.coverage.jacoco.xmlReportPaths=report1.xml,report2.xml
 指定exec二进制文件存放路径，默认 target/coverage-reports: sonar.jacoco.reportPaths=target/coverage-reports/jacoco-unit.exec
+排除不需要计算到覆盖率的代码(不能没有**): -Dsonar.coverage.exclusions=modules/**,tools/tool-trans-fetcher/src/**
+单元测试报告路径: -Dsonar.junit.reportPaths=[Surefire XML-format reports]
+排除: -Dsonar.coverage.exclusions=**/src/test/**

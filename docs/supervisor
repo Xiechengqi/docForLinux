@@ -1,0 +1,9 @@
+centos7/8 安装 supervisor: yum install -y epel-release && yum install -y supervisor
+查看所管理的服务状态: supervisorctl status 
+启动一个服务: supervisorctl start <program_name>
+重启一个服务（注意：重启服务不会重新加载配置文件）: supervisorctl restart <program_name>
+关闭一个服务: supervisorctl stop <program_name>
+重新加载配置文件，并重启配置有变动的服务: supervisorctl update
+重新加载配置文件，但不会重启配置有变动的服务: supervisorctl reread
+重启 Supervisor 服务端: supervisorctl reload
+清理一个服务的 stdout log: supervisorctl clear <program_name>

@@ -2,3 +2,4 @@
 查看某个服务日志: journalctl -u service-name.service
 查看某个服务完整日志: journalctl -u service-name.service --no-pager
 查看某个服务是否是开机启动: systemctl is-enabled supervisord
+查看服务 service 文件内容: systemctl cat sshd
